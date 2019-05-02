@@ -1,0 +1,39 @@
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+ <div class="container">
+
+     {{#if errors}}
+       {{#each errors}}
+       <div class="alert alert-danger">{{msg}}</div>
+       {{/each}}
+     {{/if}}
+<h2  class="page-header">Crear Cuenta</h2>
+<form action="/users/register" method="POST">
+  <div class="form-group">
+       <label for="">Name</label>
+       <input type="text" class="form-control" placeholder="Name" name="name">
+  </div>
+  <div class="form-group">
+       <label for="">Username</label>
+       <input type="text" class="form-control" placeholder="Password" name="username">
+  </div>
+   <div class="form-group">
+       <label for="">Email</label>
+       <input type="email" class="form-control" placeholder="Email" name="email">
+  </div>
+   <div class="form-group">
+       <label for="">Password</label>
+       <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+   <div class="form-group">
+       <label for="">Confirmar Password</label>
+       <input type="password" class="form-control" placeholder="Password" name="password2">
+  </div>
+  <button type="submit" class="btn btn-default">Enviar</button>
+</form>
+</div>
